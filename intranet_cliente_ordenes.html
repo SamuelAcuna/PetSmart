@@ -85,43 +85,67 @@
                 <hr />
                 <div class="row">
                     <div class="col">
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">Numero de Orden</th>
-                                <th scope="col">Fecha de compra</th>
-                                <th scope="col">Metodo de pago</th>
-                                <th scope="col">Monto</th>
-                                <th scope="col">Estado de la orden</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row"><a href="intranet_cliente_ordenes_compra.html">3031</a></th>
-                                <td>03/12/2023</td>
-                                <td>Mercado Pago</td>
-                                <td>$351.320</td>
-                                <td>Completado</td>
-                              </tr>
-                              <tr>
-                                <th scope="row"><a href="intranet_cliente_ordenes_compra.html">3320</a></th>
-                                <td>07/01/2024</td>
-                                <td>Mercado Pago</td>
-                                <td>$45.000</td>
-                                <td>Completado</td>
-                              </tr>
-                              <tr>
-                                <th scope="row"><a href="intranet_cliente_ordenes_compra.html">3343</a></th>
-                                <td>04/04/2024</td>
-                                <td>Tarjeta de credito</td>
-                                <td>$15.630</td>
-                                <td>Enviado</td>
-                              </tr>
-                            </tbody>
-                          </table>
+                        
                        
 
-
+                        <div class="container mt-4">
+                            <h1 class="mb-4">Detalle de la orden de pedido</h1>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2>Información de la orden:</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="numeroOrden" class="form-label">Número de orden</label>
+                                            <input type="text" class="form-control" id="numeroOrden" value="123456" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="metodoPago" class="form-label">Método de pago</label>
+                                            <input type="text" class="form-control" id="metodoPago" value="Tarjeta de crédito" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="estadoPago" class="form-label">Estado de pago</label>
+                                            <input type="text" class="form-control" id="estadoPago" value="Pagado" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="direccionEnvio" class="form-label">Dirección de envío</label>
+                                            <textarea class="form-control" id="direccionEnvio" rows="3" readonly>Calle Principal, Ciudad, País</textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="numeroSeguimiento" class="form-label">Numero de seguimiento</label>
+                                            <textarea class="form-control" id="numeroSeguimiento" rows="3" readonly >606033225</textarea>
+                                            
+                                        </div>
+                                        <div class="mb-3" >
+                                            <a href="http://www.chilexpress.cl" type="button" class="btn btn-primary btn-lg">Seguir pedido</a>
+                                            
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2>Detalle de los productos:</h2>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Producto</th>
+                                                <th>Cantidad</th>
+                                                <th>Precio unitario</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Collar C13-Ultra</td>
+                                                <td>1</td>
+                                                <td>$351.320</td>
+                                                <td>$351.320</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                    <h2>Total de la orden: $351.320</h2>
+                                </div>
+                            </div>
+                        </div>
 
 
 
