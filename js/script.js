@@ -1,25 +1,117 @@
-import { Datatable, Input, initMDB } from "mdb-ui-kit";
+(function($) {
 
-initMDB({ Input });
+    "use strict";
 
-const data2 = {
-  columns: ['Name', 'Position', 'Office', 'Age', 'Start date', 'Salary'],
-  rows: [
-    ['Tiger Nixon', 'System Architect', '	Edinburgh', 61, '2011/04/25', '$320,800'],
-    ['Sonya Frost', 'Software Engineer', 'Edinburgh', 23, '2008/12/13', '$103,600'],
-    ['Jena Gaines', 'Office Manager', 'London', 30, '2008/12/19', '$90,560'],
-    ['Quinn Flynn', 'Support Lead', 'Edinburgh', 22, '2013/03/03', '$342,000'],
-    ['Charde Marshall', 'Regional Director', 'San Francisco', 36, '2008/10/16', '$470,600'],
-    ['Haley Kennedy', 'Senior Marketing Designer', 'London', 43, '2012/12/18', '$313,500'],
-    ['Tatyana Fitzpatrick', 'Regional Director', 'London', 19, '2010/03/17', '$385,750'],
-    ['Michael Silva', 'Marketing Designer', 'London', 66, '2012/11/27', '$198,500'],
-    ['Paul Byrd', 'Chief Financial Officer (CFO)', 'New York', 64, '2010/06/09', '$725,000'],
-    ['Gloria Little', 'Systems Administrator', 'New York', 59, '2009/04/10', '$237,500'],
-  ],
-};
+    var searchPopup = function() {
+      // open search box
+      $('#header-nav').on('click', '.search-button', function(e) {
+        $('.search-popup').toggleClass('is-visible');
+      });
 
-const instance = new Datatable(document.getElementById('datatable'), data2)
+      $('#header-nav').on('click', '.btn-close-search', function(e) {
+        $('.search-popup').toggleClass('is-visible');
+      });
+      
+      $(".search-popup-trigger").on("click", function(b) {
+          b.preventDefault();
+          $(".search-popup").addClass("is-visible"),
+          setTimeout(function() {
+              $(".search-popup").find("#search-popup").focus()
+          }, 350)
+      }),
+      $(".search-popup").on("click", function(b) {
+          ($(b.target).is(".search-popup-close") || $(b.target).is(".search-popup-close svg") || $(b.target).is(".search-popup-close path") || $(b.target).is(".search-popup")) && (b.preventDefault(),
+          $(this).removeClass("is-visible"))
+      }),
+      $(document).keyup(function(b) {
+          "27" === b.which && $(".search-popup").removeClass("is-visible")
+      })
+    }
 
-document.getElementById('datatable-search-input').addEventListener('input', (e) => {
-  instance.input-group(e.target.value);
-});
+    var initProductQty = function(){
+
+      $('.product-qty').each(function(){
+
+        var $el_product = $(this);
+        var quantity = 0;
+
+        $el_product.find('.quantity-right-plus').click(function(e){
+            e.preventDefault();
+            var quantity = parseInt($el_product.find('#quantity').val());
+            $el_product.find('#quantity').val(quantity + 1);
+        });
+
+        $el_product.find('.quantity-left-minus').click(function(e){
+            e.preventDefault();
+            var quantity = parseInt($el_product.find('#quantity').val());
+            if(quantity>0){
+              $el_product.find('#quantity').val(quantity - 1);
+            }
+        });
+
+      });
+
+    }
+
+    $(document).ready(function() {
+
+      searchPopup();
+      initProductQty();
+
+      var swiper = new Swiper(".main-swiper", {
+        speed: 500,
+        navigation: {
+          nextEl: ".swiper-arrow-prev",
+          prevEl: ".swiper-arrow-next",
+        },
+      });         
+
+      var swiper = new Swiper(".product-swiper", {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        pagination: {
+          el: "#mobile-products .swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          980: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          }
+        },
+      });      
+
+      var swiper = new Swiper(".product-watch-swiper", {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        pagination: {
+          el: "#smart-watches .swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          980: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          }
+        },
+      }); 
+
+      var swiper = new Swiper(".testimonial-swiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-arrow-prev",
+          prevEl: ".swiper-arrow-next",
+        },
+      }); 
+
+    }); // End of a document ready
+
+})(jQuery);
