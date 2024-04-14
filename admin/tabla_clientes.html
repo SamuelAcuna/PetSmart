@@ -15,7 +15,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand ps-3" href="index.html">Pet Smart</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -32,7 +32,7 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">Perfil</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Salir</a></li>
+                        <li><a class="dropdown-item" href="../Index.html">Salir</a></li>
                     </ul>
                 </li>
             </ul>
@@ -82,223 +82,110 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Productos</h1>
+                        <h1 class="mt-4">Clientes</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Productos</li>
+                            <li class="breadcrumb-item active">Clientes</li>
                         </ol>
                         
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Lista de productos
+                                Lista de Clientes
                             </div>
                             <div class="card-body">
-                                <a href="agregar_producto.html" class="btn btn-primary"> Agregar Producto</a>
-                                <hr>
+                                
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>Sku</th>
+                                            <th>Rut</th>
                                             <th>Nombre</th>
-                                            <th>Categoria</th>
-                                            <th>Precio</th>
-                                            <th>Inventario</th>
-                                            <th>Estado</th>
+                                            <th>Apellido</th>
+                                            <th>Email</th>
+                                            <th>Tipo</th>
+                                            <th>Ordenes pendientes</th>
                                             <th>Gestion</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Sku</th>
+                                            <th>Rut</th>
                                             <th>Nombre</th>
-                                            <th>Categoria</th>
-                                            <th>Precio</th>
-                                            <th>Inventario</th>
-                                            <th>Estado</th>
+                                            <th>Apellido</th>
+                                            <th>Email</th>
+                                            <th>Tipo</th>
+                                            <th>Ordenes pendientes</th>
                                             <th>Gestion</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <td>ABC123</td>
-                                            <td>Producto A</td>
-                                            <td>Collar</td>
-                                            <td>$99.99</td>
-                                            <td>50</td>
-                                            <td>En Stock</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>DEF456</td>
-                                            <td>Producto B</td>
-                                            <td>Plato</td>
-                                            <td>$49.99</td>
-                                            <td>30</td>
-                                            <td>En Stock</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>GHI789</td>
-                                            <td>Producto C</td>
-                                            <td>Plato</td>
-                                            <td>$199.99</td>
+                                        <td>99999999A</td>
+                                            <td>Juan</td>
+                                            <td>Peres</td>
+                                            <td>juan@gm.cl</td>
+                                            <td>Registrado</td>
                                             <td>0</td>
-                                            <td>Agotado</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
                                                 <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
                                             </td>
                                           </tr>
-                                          <tr>
-                                            <td>JKL012</td>
-                                            <td>Producto D</td>
-                                            <td>Collar</td>
-                                            <td>$149.99</td>
-                                            <td>15</td>
-                                            <td>En Stock</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>MNO345</td>
-                                            <td>Producto E</td>
-                                            <td>Accesorio</td>
-                                            <td>$299.99</td>
-                                            <td>10</td>
-                                            <td>En Stock</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
-                                            </td>
-                                          </tr>
-                                        <tr>
-                                            <td>ABC123</td>
-                                            <td>Producto A</td>
-                                            <td>Collar</td>
-                                            <td>$99.99</td>
-                                            <td>50</td>
-                                            <td>En Stock</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>DEF456</td>
-                                            <td>Producto B</td>
-                                            <td>Plato</td>
-                                            <td>$49.99</td>
-                                            <td>30</td>
-                                            <td>En Stock</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>GHI789</td>
-                                            <td>Producto C</td>
-                                            <td>Plato</td>
-                                            <td>$199.99</td>
+                                          <td>99999999A</td>
+                                            <td>Juan</td>
+                                            <td>Peres</td>
+                                            <td>juan@gm.cl</td>
+                                            <td>Registrado</td>
                                             <td>0</td>
-                                            <td>Agotado</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
                                                 <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
                                             </td>
                                           </tr>
-                                          <tr>
-                                            <td>JKL012</td>
-                                            <td>Producto D</td>
-                                            <td>Collar</td>
-                                            <td>$149.99</td>
-                                            <td>15</td>
-                                            <td>En Stock</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>MNO345</td>
-                                            <td>Producto E</td>
-                                            <td>Accesorio</td>
-                                            <td>$299.99</td>
-                                            <td>10</td>
-                                            <td>En Stock</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>ABC123</td>
-                                            <td>Producto A</td>
-                                            <td>Collar</td>
-                                            <td>$99.99</td>
-                                            <td>50</td>
-                                            <td>En Stock</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>DEF456</td>
-                                            <td>Producto B</td>
-                                            <td>Plato</td>
-                                            <td>$49.99</td>
-                                            <td>30</td>
-                                            <td>En Stock</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>GHI789</td>
-                                            <td>Producto C</td>
-                                            <td>Plato</td>
-                                            <td>$199.99</td>
+                                          <td>99999999A</td>
+                                            <td>Juan</td>
+                                            <td>Peres</td>
+                                            <td>juan@gm.cl</td>
+                                            <td>Registrado</td>
                                             <td>0</td>
-                                            <td>Agotado</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
                                                 <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
                                             </td>
                                           </tr>
-                                          <tr>
-                                            <td>JKL012</td>
-                                            <td>Producto D</td>
-                                            <td>Collar</td>
-                                            <td>$149.99</td>
-                                            <td>15</td>
-                                            <td>En Stock</td>
+                                          <td>99999999A</td>
+                                            <td>Juan</td>
+                                            <td>Peres</td>
+                                            <td>juan@gm.cl</td>
+                                            <td>Registrado</td>
+                                            <td>0</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
                                                 <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
                                             </td>
                                           </tr>
-                                          <tr>
-                                            <td>MNO345</td>
-                                            <td>Producto E</td>
-                                            <td>Accesorio</td>
-                                            <td>$299.99</td>
-                                            <td>10</td>
-                                            <td>En Stock</td>
+                                          <td>99999999A</td>
+                                            <td>Juan</td>
+                                            <td>Peres</td>
+                                            <td>juan@gm.cl</td>
+                                            <td>Registrado</td>
+                                            <td>0</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
                                                 <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
                                             </td>
                                           </tr>
+                                          <td>99999999A</td>
+                                            <td>Juan</td>
+                                            <td>Peres</td>
+                                            <td>juan@gm.cl</td>
+                                            <td>Registrado</td>
+                                            <td>0</td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary btn-sm" onclick="mostrarDetalles('001')">Modificar</button>
+                                                <button type="button" class="btn btn-danger btn-sm" onclick="eliminar('001')">Eliminar</button>
+                                            </td>
+                                          </tr>
+                                          
                                     </tbody>
                                     
                                 </table>
@@ -331,7 +218,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                        <p>¿Estás seguro de que deseas eliminar este cliente?</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="confirm()">Confirmar</button>
@@ -349,11 +236,11 @@
     
         <script>
             function mostrarDetalles(numeroOrden) {
-                window.location.href = "modificar_producto.html";
+                window.location.href = "modificar_cliente.html";
                 
             }
             function confirm(){
-                alert("¡Producto eliminado correctamente!");
+                alert("Cliente eliminado correctamente!");
                 $('#confirmationModal').modal('hide');
             }
             function eliminar(sku){
@@ -363,12 +250,7 @@
                 $('#confirmationModal').modal('hide');
             }
     
-            function actualizarEstadoEnvio() {
-                // Aquí puedes agregar la lógica para actualizar el estado de envío y el número de seguimiento en la base de datos
-                var numeroSeguimiento = $('#numeroSeguimiento').val();
-                alert("Estado de envío actualizado con número de seguimiento: " + numeroSeguimiento);
-                $('#detallesPedidoModal').modal('hide');
-            }
+            
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
