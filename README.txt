@@ -3,4 +3,4 @@
 Desarrollado por:
 
 Samuel Acuña 
-Juan Pablo 
+Juan Pablo Mora
