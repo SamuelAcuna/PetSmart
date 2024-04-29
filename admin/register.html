@@ -37,7 +37,6 @@
   <div class="row justify-content-center">
     <div class="col-lg-6">
       <h2 class="mb-4">Formulario de Registro</h2>
-              <!-- mandamos los datos al login -->
       <form id="registroForm" method="POST" action="login.html">
         <!-- Nombre -->
         <div class="mb-3">
@@ -64,14 +63,18 @@
           <label for="confirmPassword" class="form-label">Repetir Contraseña</label>
           <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
         </div>
-        <!-- Botón de Envío -->
-        <button type="submit" class="btn btn-primary">Registrarse</button>
+        <!-- Botones -->
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary">Registrarse</button>
+          <a href="login.html" class="btn btn-secondary">¿Tienes cuenta? Inicia sesión</a>
+        </div>
       </form>
     </div>
   </div>
 </div>
 
 <!-- Bootstrap JS y dependencias Popper.js y jQuery -->
-<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
