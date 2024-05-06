@@ -90,7 +90,8 @@
           <p class="lead mb-5">Su orden ya va en camino.</p>
           <p><a href="shop.html" class="btn btn-sm btn-outline-black">Volver a la Tienda</a></p>
 		  <p><a href="https://www.chilexpress.cl/" class="btn btn-sm btn-outline-black">Monitorear tu pedido</a></p>
-		  <p><a href="boleta.html" class="btn btn-sm btn-outline-black">imprimir tu boleta</a></p>
+		  <p><a href="boleta.html" class="btn btn-sm btn-outline-black descargar-btn " onclick="descargarArchivo()" >imprimir tu boleta</a></p>
+		
 
         </div>
       </div>
@@ -171,6 +172,21 @@
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
+		<script>
+			function descargarArchivo() {
+				// Ruta al archivo PDF
+				var archivoPDF = 'boleta.pdf';
+			
+				// Crear un enlace temporal
+				var link = document.createElement('a');
+				link.href = archivoPDF;
+				link.target = '_blank'; // Abrir en una nueva pestaña
+				link.download = 'boleta.pdf'; // Nombre del archivo que se descargará
+			
+				// Simular el clic en el enlace para iniciar la descarga
+				link.click();
+			}
+			</script>
 	</body>
 
 </html>
