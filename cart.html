@@ -21,6 +21,7 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="css/tiny-slider.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
 		<title>Carrito </title>
 	</head>
 
@@ -100,20 +101,20 @@
                           <td class="product-name">
                             <h2 class="h5 text-black">Product 1</h2>
                           </td>
-                          <td>$230.000</td>
+                          <td id="preciounitario1">$230.000</td>
                           <td>
                             <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                               <div class="input-group-prepend">
                                 <button class="btn btn-outline-black decrease" type="button">&minus;</button>
                               </div>
-                              <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                              <input id="cantidad1" type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                               <div class="input-group-append">
                                 <button class="btn btn-outline-black increase" type="button">&plus;</button>
                               </div>
                             </div>
         
                           </td>
-                          <td>$230.000</td>
+                          <td id="subtotal1">$230.000</td>
                           <td><a href="#" class="btn btn-black btn-sm">X</a></td>
                         </tr>
         
@@ -124,20 +125,20 @@
                           <td class="product-name">
                             <h2 class="h5 text-black">Product 2</h2>
                           </td>
-                          <td>$150.000</td>
+                          <td id="preciounitario2">$150.000</td>
                           <td>
                             <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                               <div class="input-group-prepend">
                                 <button class="btn btn-outline-black decrease" type="button">&minus;</button>
                               </div>
-                              <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                              <input id="cantidad2" type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                               <div class="input-group-append">
                                 <button class="btn btn-outline-black increase" type="button">&plus;</button>
                               </div>
                             </div>
         
                           </td>
-                          <td>$150.000</td>
+                          <td id="subtotal2">$150.000</td>
                           <td><a href="#" class="btn btn-black btn-sm">X</a></td>
                         </tr>
                       </tbody>
@@ -179,7 +180,7 @@
                           <span class="text-black">Subtotal</span>
                         </div>
                         <div class="col-md-6 text-right">
-                          <strong class="text-black">$380.000</strong>
+                          <strong id="subtotal" class="text-black">$380.000</strong>
                         </div>
                       </div>
                       <div class="row mb-5">
@@ -187,7 +188,7 @@
                           <span class="text-black">Total</span>
                         </div>
                         <div class="col-md-6 text-right">
-                          <strong class="text-black">$452.200</strong>
+                          <strong id="total" class="text-black">$452.200</strong>
                         </div>
                       </div>
         
@@ -279,6 +280,7 @@
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
+    <script src="js/cart.js"></script>
 	</body>
 
 </html>
